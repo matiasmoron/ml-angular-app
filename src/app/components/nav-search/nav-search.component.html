@@ -1,0 +1,9 @@
+<div class="nav-search">
+  <div class="nav-search-block">
+    <input type="text" #search placeholder="Nunca dejes de buscar ..." class="input-search form-control" 
+      (keydown.enter)="navigatePage(search.value);">
+    <div class="nav-search__icon" (click)="navigatePage(search.value);">
+      <img src="../../../assets/ic_Search@2x.png.png">
+    </div>
+  </div>
+</div>

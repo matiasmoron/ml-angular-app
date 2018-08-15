@@ -1,0 +1,35 @@
+<div *ngIf="searchResult" class="search-results">
+  <div class="search-results__block">
+    <div style="padding: 16px 0;">
+      <span> ruta de navegación</span>
+    </div>
+    <ol class="search-results__list">
+      <li class="item-block" *ngFor="let resultItem of searchResult.items">
+        <div>
+          <div class="item-image-block">
+            <div>
+              <a [routerLink]="resultItem.id">
+                <img class="item-image" width="180" height="180" [src]="resultItem.picture" [alt]="resultItem.title">
+              </a>
+            </div>
+          </div>
+          <div class="item-info-block">
+            <div class="item-container">
+              <div class="item-price-block">
+                <span class="">{{resultItem.price.amount | priceFormat: resultItem.price.currency}}</span>
+                <span *ngIf="resultItem.price.decimals" class="item-price-decimals">{{resultItem.price.decimals | priceDecimalFormat}}</span>
+              </div>
+              <span class="item-info-city">{{resultItem.state_name}}</span>
+              <div *ngIf="resultItem.free_shipping" class="item-price-shipping">
+                <img src="../../../assets/ic_shipping@2x.png.png" alt="free-shipping">
+              </div>
+            </div>
+            <h2 class="item-title">
+              <span class="item-info-title">{{resultItem.title}}</span>
+            </h2>
+          </div>
+        </div>
+      </li>
+    </ol>
+  </div>
+</div>

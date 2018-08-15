@@ -1,0 +1,44 @@
+<div *ngIf="itemDetail" class="search-results">
+  <div class="search-results__block">
+    <div style="padding: 16px 0;">
+      <span> ruta de navegación</span>
+    </div>
+    <ol class="search-results__list">
+      <li class="item-block">
+        <div>
+          <div class="item-image-block">
+            <div>
+              <img class="item-image" width="680" height="680" [src]="itemDetail.item.picture" alt="">
+            </div>
+          </div>
+          <div class="item-info">
+            <div class="item-info-block">
+              <span class="item-condition">{{itemDetail.item.condition | articleCondition}} - {{itemDetail.item.sold_quantity}} vendidos</span>
+              <h1 class="item-info-title">{{itemDetail.item.title}}</h1>
+              <span class="item-price">
+                <div class="item-price-block">
+                  <span class="">{{itemDetail.item.price.amount | priceFormat: itemDetail.item.price.currency}}</span>
+                  <span *ngIf="itemDetail.item.price.decimals" class="item-price-decimals">{{itemDetail.item.price.decimals | priceDecimalFormat}}</span>
+                </div>
+              </span>
+              <div class="item-info-buy-block">
+                <button class="item-info-buy-elem">
+                  Comprar
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="item-description-block">
+            <div class="item-description-title">
+              <span>Descripción del producto</span>
+            </div>
+            <div class="item-description-info">{{itemDetail.item.description}}</div>
+          </div>
+        </div>
+      </li>
+    </ol>
+    
+    
+    
+  </div>
+</div>

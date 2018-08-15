@@ -1,0 +1,81 @@
+
+.search-results
+  width: 100% 
+  display: flex 
+  justify-content: center
+
+.search-results__block
+  width: calc(65% + 80px)
+
+.search-results__list
+  background: #fff
+  list-style: none
+  padding: 0
+  margin: 0 0 32px 0
+  position: relative
+  border-radius: 4px
+
+.item-block
+  position: relative
+
+
+.item-block::after
+  content: ""
+  position: absolute
+  left: 24px
+  bottom: 0
+  height: 1px
+  width: 94.5%
+  border-bottom: 1px solid #eee
+
+.item-image-block
+  display: inline-block
+  width: 180px
+  height: 180px
+  margin: 16px
+
+.item-image
+  border-radius: 4px
+
+.item-info-block
+  display: inline-block
+  width: 70%
+  padding-top: 25px
+  position: absolute
+
+.item-container
+  padding-bottom: 32px
+  font-size: 24px
+  display: flex
+  align-items: center
+
+.item-price-block
+  position: relative
+
+.item-price-decimals
+  position: absolute
+  top: 0
+  right: -17px
+  font-size: 13px
+
+.item-price-shipping
+  display: inline-block
+  height: 22px
+  width: 22px
+  margin-left: 10px
+
+.item-price-shipping img
+  width: 100%
+  height: 100%
+
+.item-info-title
+  font-size: 18px
+
+.item-info-city
+  position: absolute
+  font-size: 12px
+  right: 10px
+
+.item-title
+  margin: auto
+  font-weight: normal
