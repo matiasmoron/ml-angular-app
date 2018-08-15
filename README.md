@@ -5,9 +5,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Init steps
 
 1- npm -g install @angular/cli
-
 2- npm install
-
 
 ## Development server
 
